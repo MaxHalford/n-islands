@@ -6,7 +6,6 @@ import matplotlib.colors as clr
 gridSize = 150
 colors = 3
 iterations = 1500000
-grids = {}
 grid = np.random.random_integers(1-0.5, colors-0.5, size = (gridSize, gridSize))
 
 randChoice = random.choice
@@ -31,10 +30,7 @@ def changeCell(array):
 	neighbour = randomNeighbour(x, y)
 	array[x, y] = array[neighbour[0], neighbour[1]]
 
-index = 1
 for i in range(iterations):
-	grids[index] = grid
-	index += 1
 	changeCell(grid)
 
 fig, ax = plt.subplots()
