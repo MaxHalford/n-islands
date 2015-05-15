@@ -2,19 +2,18 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.colors as clr
-import prettyplotlib
 
 gridSize = 100
 colors = 8
-iterations = 1500000
-grid = np.random.random_integers(1-0.5, colors-0.5, size = (gridSize, gridSize))
+iterations = 150000
+grid = np.random.random_integers(1 - 0.5, colors - 0.5, size=(gridSize, gridSize))
 
 randChoice = random.choice
 randInt = random.randint
 
-def randomNeighbour(x,y):
-	x = randChoice([x, max(0,x-1), min(gridSize - 1, x + 1)])
-	y = randChoice([y, max(0,y-1), min(gridSize - 1, y + 1)])
+def randomNeighbour(x, y):
+	x = randChoice([x, max(0, x - 1), min(gridSize - 1, x + 1)])
+	y = randChoice([y, max(0, y - 1), min(gridSize - 1, y + 1)])
 	return (x, y)
 
 def changeCell(array):

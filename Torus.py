@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as clr
 
 gridSize = 150
-colors = 3
-iterations = 1500000
+colors = 4
+iterations = 15000
 grid = np.random.random_integers(1-0.5, colors-0.5, size = (gridSize, gridSize))
 
 randChoice = random.choice
